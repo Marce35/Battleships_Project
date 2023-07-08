@@ -29,5 +29,12 @@ namespace Battleships
             DeployedShips = 0;
             RemainingShips = numberOfShips;
         }
+
+        //public Player() 
+        //{
+        //    NumberOfShips = 6;
+
+        //}
+
     }
 }

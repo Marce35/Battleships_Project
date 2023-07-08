@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using System.Diagnostics;
+using System.Media;
+
 
 namespace Battleships
 {
@@ -17,9 +19,11 @@ namespace Battleships
 
 
         Random rand = new Random();
+        public SoundPlayer SoundPlayer { get; set; }
 
         public Player Player { get; set; }
         public Player Opponent { get; set; }
+        public bool ReadyToAttack { get; set; }
 
         public Form1()
         {
@@ -31,7 +35,8 @@ namespace Battleships
 
         public void New_Game()
         {
-            Player = new Player("Marko", 6);
+            ReadyToAttack = true;
+            Player = new Player(DeploymentMenu.BasePlayer.Name, 6);
             Opponent = new Player("Computer", 6);
             Player.FieldsList = new List<Button>() { a1,a2, a3, a4, a5, a6, b1, b2, b3, b4, b5, b6,
                                                      c1, c2, c3, c4, c5, c6, d1, d2, d3, d4, d5, d6,
@@ -44,12 +49,12 @@ namespace Battleships
             for (int i=0; i< Opponent.FieldsList.Count; i++)
             {
                 Opponent.FieldsList[i].Tag = null;
-                Opponent.FieldsList[i].Enabled = true;
+                Opponent.FieldsList[i].Enabled = false;
                 Opponent.FieldsList[i].BackgroundImage = null;
                 Opponent.FieldsList[i].BackColor = Color.White;
             }
 
-            btnStartBattle.Enabled = false;
+            btnStartBattle.Enabled = true;
 
 
 
@@ -78,15 +83,11 @@ namespace Battleships
                 //Debug.WriteLine(String.Format("Opponent Name: %s\t Tag: %s\t", (string)Opponent.FieldsList[i].Name, (string)Player.FieldsList[i].Tag));
             }
 
-            int counter = 0;
+            
             foreach(Control control in this.Controls)
             {
                 if(control is Button button)
                 {
-                    if (counter >= Player.FieldsList.Count)
-                    {
-                        break;
-                    }
                     for(int i=0; i < Player.FieldsList.Count; i++)
                     {
                         if (button.Name.ToLower() == Player.FieldsList[i].Name.ToLower())
@@ -112,66 +113,183 @@ namespace Battleships
             }
 
             Invalidate();
-            OpponentPositionPicker();
+            
 
             
         }
 
-        private void BattleTimerForOpponent_Tick(object sender, EventArgs e)
+        private async void BattleTimerForOpponent_Tick(object sender, EventArgs e)
         {
+            if(Player.RemainingShips > 0)
+            {
+                int attackIndex = rand.Next(Player.FieldsList.Count);
 
+                if ((string)Player.FieldsList[attackIndex].Tag == "PlayerShip")
+                {
+                    UpdatePlayerButtons(Player.FieldsList[attackIndex], attackIndex);
+
+                    Player.FieldsList[attackIndex].BackgroundImage = Properties.Resources.hit;
+
+                    SoundPlayer = new SoundPlayer(Properties.Resources.hit0Sound);
+                    SoundPlayer.Play();
+                    
+                    Player.FieldsList[attackIndex].BackColor = Color.Navy;
+                    Player.FieldsList.RemoveAt(attackIndex);
+
+                    Player.RemainingShips -= 1;
+
+                    Opponent.Hits += 1;
+
+                    
+                    BattleTimerForOpponent.Stop();
+                }
+                else
+                {
+                    UpdatePlayerButtons(Player.FieldsList[attackIndex], attackIndex);
+
+                    Player.FieldsList[attackIndex].BackgroundImage = Properties.Resources.splashImage;
+                    SoundPlayer = new SoundPlayer(Properties.Resources.splash1Sound);
+                    SoundPlayer.Play();
+
+
+                    Player.FieldsList[attackIndex].BackColor = Color.Navy;
+                    Player.FieldsList.RemoveAt(attackIndex);
+                    
+                    BattleTimerForOpponent.Stop();
+                }
+                await Task.Delay(1500);
+                ReadyToAttack = true;
+
+            }
+
+            lblOpponentHits.Text = Opponent.Hits.ToString();
+
+            if (Player.RemainingShips == 0)
+            {
+                MessageBox.Show("You have lost the game. Better luck next time", "Game Lost");
+            }
+
+            Invalidate();
         }
 
-        private void PlayerFieldSelectButtons_Click(object sender, EventArgs e)
+        
+
+        private async void AttackButtons_Click(object sender, EventArgs e)
         {
-            if(Player.DeployedShips < Player.NumberOfShips)
+            if (ReadyToAttack)
             {
-                Button pickedPosition = (Button)sender;
+                if (Opponent.RemainingShips > 0)
+                {
+                    Button attackFieldPositionBtn = (Button)sender;
 
-                pickedPosition.Enabled = false;
-                pickedPosition.Tag = "playerShip";
-                pickedPosition.BackColor = Color.Navy;
-                Player.DeployedShips += 1;
+                    int index = Opponent.FieldsList.FindIndex(z => z.Name == attackFieldPositionBtn.Name);
+
+                    if (Opponent.FieldsList[index].Enabled)
+                    {
+                        if ((string)Opponent.FieldsList[index].Tag == "OpponentShip")
+                        {
+                            attackFieldPositionBtn.Tag = "OpponentShip";
+                            attackFieldPositionBtn.Enabled = false;
+                            attackFieldPositionBtn.BackgroundImage = Properties.Resources.hit;
+
+                            SoundPlayer = new SoundPlayer(Properties.Resources.hit2Sound);
+                            SoundPlayer.Play();
+                            Opponent.RemainingShips -= 1;
+                            Player.Hits += 1;
+                        }
+                        else
+                        {
+                            attackFieldPositionBtn.Tag = null;
+                            attackFieldPositionBtn.Enabled = false;
+                            attackFieldPositionBtn.BackgroundImage = Properties.Resources.splashImage;
+                            SoundPlayer = new SoundPlayer(Properties.Resources.splash1Sound);
+                            SoundPlayer.Play();
+                        }
+                    }
+                    ReadyToAttack = false;
+                    await Task.Delay(1500);
+
+                    BattleTimerForOpponent.Start();
+                }
             }
-            if(Player.DeployedShips == Player.NumberOfShips)
+            
+            
+            
+
+            lblPlayerHits.Text = Player.Hits.ToString();
+            
+            if(Opponent.RemainingShips == 0)
             {
-                btnStartBattle.Enabled = true;
-                btnStartBattle.ForeColor = Color.White;
-                btnStartBattle.BackColor = Color.Red;
-
-                lblMainText.Text = "Press the \"Start Battle\" button";
+                MessageBox.Show("Congratulations you have won the game!!!!", "Game Won");
             }
-        }
-
-        private void AttackButtons_Click(object sender, EventArgs e)
-        {
-
+            Invalidate();
         }
 
 
         public void OpponentPositionPicker() 
         {
-            for(int i = 0; i <= Opponent.NumberOfShips; i++)
+            List<int> availableShipLocations = Enumerable.Range(0, Opponent.FieldsList.Count).ToList();
+            for(int i=0; i<Opponent.NumberOfShips; i++)
             {
-                int shipLocation = rand.Next(Opponent.FieldsList.Count);
+                int shipLocationIndex = rand.Next(availableShipLocations.Count);
+                int shipLocation = availableShipLocations[shipLocationIndex];
 
-                if ((string)Opponent.FieldsList[i].Tag == null && Opponent.FieldsList[i].Enabled == true)
-                {
-                    Opponent.FieldsList[shipLocation].Tag = "OpponentShip";
+                Opponent.FieldsList[shipLocation].Tag = "OpponentShip";
+                availableShipLocations.RemoveAt(shipLocationIndex);
 
-                    Debug.WriteLine("Opponent Ship Position " + Opponent.FieldsList[shipLocation].Name);
-                }
+                //Debug.WriteLine("Opponent Ship Position " + Opponent.FieldsList[shipLocation].Name);
             }
         }
 
         private void btnStartBattle_Click(object sender, EventArgs e)
         {
-
+            btnStartBattle.Enabled = false;
+            for (int i = 0; i < Opponent.FieldsList.Count; i++)
+            {
+                Opponent.FieldsList[i].Tag = null;
+                Opponent.FieldsList[i].Enabled = true;
+                Opponent.FieldsList[i].BackgroundImage = null;
+                Opponent.FieldsList[i].BackColor = Color.White;
+            }
+            OpponentPositionPicker();
+            Invalidate();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void UpdatePlayerButtons(Button sender, int indexToAttack)
+        {
+            foreach (Control control in this.Controls)
+            {
+                if (control is Button button)
+                {
+                    if(button.Name.Equals(sender.Name))
+                    {
+                        if((string)button.Tag == "PlayerShip")
+                        {
+                            button.Enabled = false;
+                            
+                            button.BackgroundImage = Properties.Resources.hit;
+
+                        }
+                        else
+                        {
+                            button.Enabled = false;
+                            
+                            button.BackgroundImage = Properties.Resources.splashImage;
+                        }
+                    }
+                    
+                }
+            }
+            Invalidate();
+        }
+
+
+
+
     }
 }

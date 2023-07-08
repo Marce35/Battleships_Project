@@ -118,11 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="deckImg2_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deckImg2_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bkackboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bkackboard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="deckImg1Resized" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deckImg1Resized.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="deckImg2_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deckImg2_background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="splashImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splashImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="startMenuImg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\startMenuImg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +151,22 @@
   <data name="deckImg2Resized" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\deckImg2Resized.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="bkackboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bkackboard.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Battleships_Resources_hit1Sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Battleships_Resources_hit1Sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="hit0Sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hit0Sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="hit2Sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hit2Sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splash0Sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash0Sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splash1Sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\splash1Sound.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

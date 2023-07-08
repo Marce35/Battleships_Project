@@ -69,8 +69,8 @@
             this.y6 = new System.Windows.Forms.Button();
             this.z6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblPlayerHits = new System.Windows.Forms.Label();
+            this.lblOpponentHits = new System.Windows.Forms.Label();
             this.btnStartBattle = new System.Windows.Forms.Button();
             this.lblMainText = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -152,6 +152,7 @@
             // 
             // u4
             // 
+            this.u4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.u4.Location = new System.Drawing.Point(794, 149);
             this.u4.Name = "u4";
             this.u4.Size = new System.Drawing.Size(52, 46);
@@ -161,6 +162,7 @@
             // 
             // u3
             // 
+            this.u3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.u3.Location = new System.Drawing.Point(727, 149);
             this.u3.Name = "u3";
             this.u3.Size = new System.Drawing.Size(52, 46);
@@ -170,6 +172,7 @@
             // 
             // v4
             // 
+            this.v4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.v4.Location = new System.Drawing.Point(794, 201);
             this.v4.Name = "v4";
             this.v4.Size = new System.Drawing.Size(52, 46);
@@ -179,6 +182,7 @@
             // 
             // v3
             // 
+            this.v3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.v3.Location = new System.Drawing.Point(727, 201);
             this.v3.Name = "v3";
             this.v3.Size = new System.Drawing.Size(52, 46);
@@ -188,6 +192,7 @@
             // 
             // w4
             // 
+            this.w4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.w4.Location = new System.Drawing.Point(794, 253);
             this.w4.Name = "w4";
             this.w4.Size = new System.Drawing.Size(52, 46);
@@ -197,6 +202,7 @@
             // 
             // w3
             // 
+            this.w3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.w3.Location = new System.Drawing.Point(727, 253);
             this.w3.Name = "w3";
             this.w3.Size = new System.Drawing.Size(52, 46);
@@ -206,6 +212,7 @@
             // 
             // x4
             // 
+            this.x4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.x4.Location = new System.Drawing.Point(794, 314);
             this.x4.Name = "x4";
             this.x4.Size = new System.Drawing.Size(52, 46);
@@ -215,6 +222,7 @@
             // 
             // x3
             // 
+            this.x3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.x3.Location = new System.Drawing.Point(727, 314);
             this.x3.Name = "x3";
             this.x3.Size = new System.Drawing.Size(52, 46);
@@ -224,6 +232,7 @@
             // 
             // y4
             // 
+            this.y4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.y4.Location = new System.Drawing.Point(794, 366);
             this.y4.Name = "y4";
             this.y4.Size = new System.Drawing.Size(52, 46);
@@ -233,6 +242,7 @@
             // 
             // y3
             // 
+            this.y3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.y3.Location = new System.Drawing.Point(727, 366);
             this.y3.Name = "y3";
             this.y3.Size = new System.Drawing.Size(52, 46);
@@ -242,6 +252,7 @@
             // 
             // z4
             // 
+            this.z4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.z4.Location = new System.Drawing.Point(794, 418);
             this.z4.Name = "z4";
             this.z4.Size = new System.Drawing.Size(52, 46);
@@ -251,6 +262,7 @@
             // 
             // z3
             // 
+            this.z3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.z3.Location = new System.Drawing.Point(727, 418);
             this.z3.Name = "z3";
             this.z3.Size = new System.Drawing.Size(52, 46);
@@ -260,6 +272,7 @@
             // 
             // u2
             // 
+            this.u2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.u2.Location = new System.Drawing.Point(659, 149);
             this.u2.Name = "u2";
             this.u2.Size = new System.Drawing.Size(52, 46);
@@ -269,6 +282,7 @@
             // 
             // v2
             // 
+            this.v2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.v2.Location = new System.Drawing.Point(659, 201);
             this.v2.Name = "v2";
             this.v2.Size = new System.Drawing.Size(52, 46);
@@ -278,6 +292,7 @@
             // 
             // w2
             // 
+            this.w2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.w2.Location = new System.Drawing.Point(659, 253);
             this.w2.Name = "w2";
             this.w2.Size = new System.Drawing.Size(52, 46);
@@ -287,6 +302,7 @@
             // 
             // x2
             // 
+            this.x2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.x2.Location = new System.Drawing.Point(659, 314);
             this.x2.Name = "x2";
             this.x2.Size = new System.Drawing.Size(52, 46);
@@ -296,6 +312,7 @@
             // 
             // y2
             // 
+            this.y2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.y2.Location = new System.Drawing.Point(659, 366);
             this.y2.Name = "y2";
             this.y2.Size = new System.Drawing.Size(52, 46);
@@ -305,6 +322,7 @@
             // 
             // z2
             // 
+            this.z2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.z2.Location = new System.Drawing.Point(659, 418);
             this.z2.Name = "z2";
             this.z2.Size = new System.Drawing.Size(52, 46);
@@ -314,6 +332,7 @@
             // 
             // u1
             // 
+            this.u1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.u1.Location = new System.Drawing.Point(592, 149);
             this.u1.Name = "u1";
             this.u1.Size = new System.Drawing.Size(52, 46);
@@ -323,6 +342,7 @@
             // 
             // v1
             // 
+            this.v1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.v1.Location = new System.Drawing.Point(592, 201);
             this.v1.Name = "v1";
             this.v1.Size = new System.Drawing.Size(52, 46);
@@ -332,6 +352,7 @@
             // 
             // w1
             // 
+            this.w1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.w1.Location = new System.Drawing.Point(592, 253);
             this.w1.Name = "w1";
             this.w1.Size = new System.Drawing.Size(52, 46);
@@ -341,6 +362,7 @@
             // 
             // x1
             // 
+            this.x1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.x1.Location = new System.Drawing.Point(592, 314);
             this.x1.Name = "x1";
             this.x1.Size = new System.Drawing.Size(52, 46);
@@ -350,6 +372,7 @@
             // 
             // y1
             // 
+            this.y1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.y1.Location = new System.Drawing.Point(592, 366);
             this.y1.Name = "y1";
             this.y1.Size = new System.Drawing.Size(52, 46);
@@ -359,6 +382,7 @@
             // 
             // z1
             // 
+            this.z1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.z1.Location = new System.Drawing.Point(592, 418);
             this.z1.Name = "z1";
             this.z1.Size = new System.Drawing.Size(52, 46);
@@ -368,6 +392,7 @@
             // 
             // u5
             // 
+            this.u5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.u5.Location = new System.Drawing.Point(861, 149);
             this.u5.Name = "u5";
             this.u5.Size = new System.Drawing.Size(52, 46);
@@ -377,6 +402,7 @@
             // 
             // v5
             // 
+            this.v5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.v5.Location = new System.Drawing.Point(861, 201);
             this.v5.Name = "v5";
             this.v5.Size = new System.Drawing.Size(52, 46);
@@ -386,6 +412,7 @@
             // 
             // w5
             // 
+            this.w5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.w5.Location = new System.Drawing.Point(861, 253);
             this.w5.Name = "w5";
             this.w5.Size = new System.Drawing.Size(52, 46);
@@ -395,6 +422,7 @@
             // 
             // x5
             // 
+            this.x5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.x5.Location = new System.Drawing.Point(861, 314);
             this.x5.Name = "x5";
             this.x5.Size = new System.Drawing.Size(52, 46);
@@ -404,6 +432,7 @@
             // 
             // y5
             // 
+            this.y5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.y5.Location = new System.Drawing.Point(861, 366);
             this.y5.Name = "y5";
             this.y5.Size = new System.Drawing.Size(52, 46);
@@ -413,6 +442,7 @@
             // 
             // z5
             // 
+            this.z5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.z5.Location = new System.Drawing.Point(861, 418);
             this.z5.Name = "z5";
             this.z5.Size = new System.Drawing.Size(52, 46);
@@ -422,6 +452,7 @@
             // 
             // u6
             // 
+            this.u6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.u6.Location = new System.Drawing.Point(929, 149);
             this.u6.Name = "u6";
             this.u6.Size = new System.Drawing.Size(52, 46);
@@ -431,6 +462,7 @@
             // 
             // v6
             // 
+            this.v6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.v6.Location = new System.Drawing.Point(929, 201);
             this.v6.Name = "v6";
             this.v6.Size = new System.Drawing.Size(52, 46);
@@ -440,6 +472,7 @@
             // 
             // w6
             // 
+            this.w6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.w6.Location = new System.Drawing.Point(929, 253);
             this.w6.Name = "w6";
             this.w6.Size = new System.Drawing.Size(52, 46);
@@ -449,6 +482,7 @@
             // 
             // x6
             // 
+            this.x6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.x6.Location = new System.Drawing.Point(929, 314);
             this.x6.Name = "x6";
             this.x6.Size = new System.Drawing.Size(52, 46);
@@ -458,6 +492,7 @@
             // 
             // y6
             // 
+            this.y6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.y6.Location = new System.Drawing.Point(929, 366);
             this.y6.Name = "y6";
             this.y6.Size = new System.Drawing.Size(52, 46);
@@ -467,6 +502,7 @@
             // 
             // z6
             // 
+            this.z6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.z6.Location = new System.Drawing.Point(929, 418);
             this.z6.Name = "z6";
             this.z6.Size = new System.Drawing.Size(52, 46);
@@ -486,27 +522,27 @@
             this.label3.TabIndex = 17;
             this.label3.Text = "Opponent:";
             // 
-            // label2
+            // lblPlayerHits
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 42);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "0";
+            this.lblPlayerHits.AutoSize = true;
+            this.lblPlayerHits.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerHits.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerHits.Location = new System.Drawing.Point(176, 37);
+            this.lblPlayerHits.Name = "lblPlayerHits";
+            this.lblPlayerHits.Size = new System.Drawing.Size(40, 42);
+            this.lblPlayerHits.TabIndex = 18;
+            this.lblPlayerHits.Text = "0";
             // 
-            // label4
+            // lblOpponentHits
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1003, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 42);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "0";
+            this.lblOpponentHits.AutoSize = true;
+            this.lblOpponentHits.BackColor = System.Drawing.Color.Transparent;
+            this.lblOpponentHits.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOpponentHits.Location = new System.Drawing.Point(1003, 37);
+            this.lblOpponentHits.Name = "lblOpponentHits";
+            this.lblOpponentHits.Size = new System.Drawing.Size(40, 42);
+            this.lblOpponentHits.TabIndex = 19;
+            this.lblOpponentHits.Text = "0";
             // 
             // btnStartBattle
             // 
@@ -555,168 +591,169 @@
             // 
             // a4
             // 
+            this.a4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.a4.Location = new System.Drawing.Point(299, 149);
             this.a4.Name = "a4";
             this.a4.Size = new System.Drawing.Size(52, 46);
             this.a4.TabIndex = 11;
             this.a4.UseVisualStyleBackColor = true;
-            this.a4.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // a3
             // 
+            this.a3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.a3.Location = new System.Drawing.Point(232, 149);
             this.a3.Name = "a3";
             this.a3.Size = new System.Drawing.Size(52, 46);
             this.a3.TabIndex = 12;
             this.a3.UseVisualStyleBackColor = true;
-            this.a3.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // f6
             // 
+            this.f6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.f6.Location = new System.Drawing.Point(434, 418);
             this.f6.Name = "f6";
             this.f6.Size = new System.Drawing.Size(52, 46);
             this.f6.TabIndex = 16;
             this.f6.UseVisualStyleBackColor = true;
-            this.f6.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // b3
             // 
+            this.b3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.b3.Location = new System.Drawing.Point(232, 201);
             this.b3.Name = "b3";
             this.b3.Size = new System.Drawing.Size(52, 46);
             this.b3.TabIndex = 12;
             this.b3.UseVisualStyleBackColor = true;
-            this.b3.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // c4
             // 
+            this.c4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.c4.Location = new System.Drawing.Point(299, 253);
             this.c4.Name = "c4";
             this.c4.Size = new System.Drawing.Size(52, 46);
             this.c4.TabIndex = 11;
             this.c4.UseVisualStyleBackColor = true;
-            this.c4.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // c3
             // 
+            this.c3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.c3.Location = new System.Drawing.Point(232, 253);
             this.c3.Name = "c3";
             this.c3.Size = new System.Drawing.Size(52, 46);
             this.c3.TabIndex = 12;
             this.c3.UseVisualStyleBackColor = true;
-            this.c3.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // d4
             // 
+            this.d4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.d4.Location = new System.Drawing.Point(299, 314);
             this.d4.Name = "d4";
             this.d4.Size = new System.Drawing.Size(52, 46);
             this.d4.TabIndex = 11;
             this.d4.UseVisualStyleBackColor = true;
-            this.d4.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // d3
             // 
+            this.d3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.d3.Location = new System.Drawing.Point(232, 314);
             this.d3.Name = "d3";
             this.d3.Size = new System.Drawing.Size(52, 46);
             this.d3.TabIndex = 12;
             this.d3.UseVisualStyleBackColor = true;
-            this.d3.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // e4
             // 
+            this.e4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.e4.Location = new System.Drawing.Point(299, 366);
             this.e4.Name = "e4";
             this.e4.Size = new System.Drawing.Size(52, 46);
             this.e4.TabIndex = 11;
             this.e4.UseVisualStyleBackColor = true;
-            this.e4.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // e3
             // 
+            this.e3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.e3.Location = new System.Drawing.Point(232, 366);
             this.e3.Name = "e3";
             this.e3.Size = new System.Drawing.Size(52, 46);
             this.e3.TabIndex = 12;
             this.e3.UseVisualStyleBackColor = true;
-            this.e3.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // f4
             // 
+            this.f4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.f4.Location = new System.Drawing.Point(299, 418);
             this.f4.Name = "f4";
             this.f4.Size = new System.Drawing.Size(52, 46);
             this.f4.TabIndex = 11;
             this.f4.UseVisualStyleBackColor = true;
-            this.f4.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // f3
             // 
+            this.f3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.f3.Location = new System.Drawing.Point(232, 418);
             this.f3.Name = "f3";
             this.f3.Size = new System.Drawing.Size(52, 46);
             this.f3.TabIndex = 12;
             this.f3.UseVisualStyleBackColor = true;
-            this.f3.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // a2
             // 
+            this.a2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.a2.Location = new System.Drawing.Point(164, 149);
             this.a2.Name = "a2";
             this.a2.Size = new System.Drawing.Size(52, 46);
             this.a2.TabIndex = 13;
             this.a2.UseVisualStyleBackColor = true;
-            this.a2.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // b2
             // 
+            this.b2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.b2.Location = new System.Drawing.Point(164, 201);
             this.b2.Name = "b2";
             this.b2.Size = new System.Drawing.Size(52, 46);
             this.b2.TabIndex = 13;
             this.b2.UseVisualStyleBackColor = true;
-            this.b2.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // c2
             // 
+            this.c2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.c2.Location = new System.Drawing.Point(164, 253);
             this.c2.Name = "c2";
             this.c2.Size = new System.Drawing.Size(52, 46);
             this.c2.TabIndex = 13;
             this.c2.UseVisualStyleBackColor = true;
-            this.c2.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // d2
             // 
+            this.d2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.d2.Location = new System.Drawing.Point(164, 314);
             this.d2.Name = "d2";
             this.d2.Size = new System.Drawing.Size(52, 46);
             this.d2.TabIndex = 13;
             this.d2.UseVisualStyleBackColor = true;
-            this.d2.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // e2
             // 
+            this.e2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.e2.Location = new System.Drawing.Point(164, 366);
             this.e2.Name = "e2";
             this.e2.Size = new System.Drawing.Size(52, 46);
             this.e2.TabIndex = 13;
             this.e2.UseVisualStyleBackColor = true;
-            this.e2.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // f2
             // 
+            this.f2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.f2.Location = new System.Drawing.Point(164, 418);
             this.f2.Name = "f2";
             this.f2.Size = new System.Drawing.Size(52, 46);
             this.f2.TabIndex = 13;
             this.f2.UseVisualStyleBackColor = true;
-            this.f2.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // a1
             // 
+            this.a1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.a1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.a1.ForeColor = System.Drawing.Color.Red;
             this.a1.Location = new System.Drawing.Point(97, 149);
@@ -724,160 +761,159 @@
             this.a1.Size = new System.Drawing.Size(52, 46);
             this.a1.TabIndex = 14;
             this.a1.UseVisualStyleBackColor = true;
-            this.a1.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // b1
             // 
+            this.b1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.b1.Location = new System.Drawing.Point(97, 201);
             this.b1.Name = "b1";
             this.b1.Size = new System.Drawing.Size(52, 46);
             this.b1.TabIndex = 14;
             this.b1.UseVisualStyleBackColor = true;
-            this.b1.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // c1
             // 
+            this.c1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.c1.Location = new System.Drawing.Point(97, 253);
             this.c1.Name = "c1";
             this.c1.Size = new System.Drawing.Size(52, 46);
             this.c1.TabIndex = 14;
             this.c1.UseVisualStyleBackColor = true;
-            this.c1.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // d1
             // 
+            this.d1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.d1.Location = new System.Drawing.Point(97, 314);
             this.d1.Name = "d1";
             this.d1.Size = new System.Drawing.Size(52, 46);
             this.d1.TabIndex = 14;
             this.d1.UseVisualStyleBackColor = true;
-            this.d1.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // e1
             // 
+            this.e1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.e1.Location = new System.Drawing.Point(97, 366);
             this.e1.Name = "e1";
             this.e1.Size = new System.Drawing.Size(52, 46);
             this.e1.TabIndex = 14;
             this.e1.UseVisualStyleBackColor = true;
-            this.e1.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // f1
             // 
+            this.f1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.f1.Location = new System.Drawing.Point(97, 418);
             this.f1.Name = "f1";
             this.f1.Size = new System.Drawing.Size(52, 46);
             this.f1.TabIndex = 14;
             this.f1.UseVisualStyleBackColor = true;
-            this.f1.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // a5
             // 
+            this.a5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.a5.Location = new System.Drawing.Point(366, 149);
             this.a5.Name = "a5";
             this.a5.Size = new System.Drawing.Size(52, 46);
             this.a5.TabIndex = 15;
             this.a5.UseVisualStyleBackColor = true;
-            this.a5.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // b5
             // 
+            this.b5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.b5.Location = new System.Drawing.Point(366, 201);
             this.b5.Name = "b5";
             this.b5.Size = new System.Drawing.Size(52, 46);
             this.b5.TabIndex = 15;
             this.b5.UseVisualStyleBackColor = true;
-            this.b5.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // c5
             // 
+            this.c5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.c5.Location = new System.Drawing.Point(366, 253);
             this.c5.Name = "c5";
             this.c5.Size = new System.Drawing.Size(52, 46);
             this.c5.TabIndex = 15;
             this.c5.UseVisualStyleBackColor = true;
-            this.c5.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // d5
             // 
+            this.d5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.d5.Location = new System.Drawing.Point(366, 314);
             this.d5.Name = "d5";
             this.d5.Size = new System.Drawing.Size(52, 46);
             this.d5.TabIndex = 15;
             this.d5.UseVisualStyleBackColor = true;
-            this.d5.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // e5
             // 
+            this.e5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.e5.Location = new System.Drawing.Point(366, 366);
             this.e5.Name = "e5";
             this.e5.Size = new System.Drawing.Size(52, 46);
             this.e5.TabIndex = 15;
             this.e5.UseVisualStyleBackColor = true;
-            this.e5.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // f5
             // 
+            this.f5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.f5.Location = new System.Drawing.Point(366, 418);
             this.f5.Name = "f5";
             this.f5.Size = new System.Drawing.Size(52, 46);
             this.f5.TabIndex = 15;
             this.f5.UseVisualStyleBackColor = true;
-            this.f5.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // a6
             // 
+            this.a6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.a6.Location = new System.Drawing.Point(434, 149);
             this.a6.Name = "a6";
             this.a6.Size = new System.Drawing.Size(52, 46);
             this.a6.TabIndex = 16;
             this.a6.UseVisualStyleBackColor = true;
-            this.a6.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // b6
             // 
+            this.b6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.b6.Location = new System.Drawing.Point(434, 201);
             this.b6.Name = "b6";
             this.b6.Size = new System.Drawing.Size(52, 46);
             this.b6.TabIndex = 16;
             this.b6.UseVisualStyleBackColor = true;
-            this.b6.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // c6
             // 
+            this.c6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.c6.Location = new System.Drawing.Point(434, 253);
             this.c6.Name = "c6";
             this.c6.Size = new System.Drawing.Size(52, 46);
             this.c6.TabIndex = 16;
             this.c6.UseVisualStyleBackColor = true;
-            this.c6.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // d6
             // 
+            this.d6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.d6.Location = new System.Drawing.Point(434, 314);
             this.d6.Name = "d6";
             this.d6.Size = new System.Drawing.Size(52, 46);
             this.d6.TabIndex = 16;
             this.d6.UseVisualStyleBackColor = true;
-            this.d6.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // e6
             // 
+            this.e6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.e6.Location = new System.Drawing.Point(434, 366);
             this.e6.Name = "e6";
             this.e6.Size = new System.Drawing.Size(52, 46);
             this.e6.TabIndex = 16;
             this.e6.UseVisualStyleBackColor = true;
-            this.e6.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // b4
             // 
+            this.b4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.b4.Location = new System.Drawing.Point(299, 201);
             this.b4.Name = "b4";
             this.b4.Size = new System.Drawing.Size(52, 46);
             this.b4.TabIndex = 11;
             this.b4.UseVisualStyleBackColor = true;
-            this.b4.Click += new System.EventHandler(this.PlayerFieldSelectButtons_Click);
             // 
             // BattleTimerForOpponent
             // 
@@ -894,8 +930,8 @@
             this.ClientSize = new System.Drawing.Size(1084, 581);
             this.Controls.Add(this.lblMainText);
             this.Controls.Add(this.btnStartBattle);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblOpponentHits);
+            this.Controls.Add(this.lblPlayerHits);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.z6);
             this.Controls.Add(this.f6);
@@ -974,6 +1010,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Battleships Game";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1027,8 +1064,8 @@
         private System.Windows.Forms.Button y6;
         private System.Windows.Forms.Button z6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPlayerHits;
+        private System.Windows.Forms.Label lblOpponentHits;
         private System.Windows.Forms.Button btnStartBattle;
         private System.Windows.Forms.Label lblMainText;
         private System.Windows.Forms.PictureBox pictureBox1;

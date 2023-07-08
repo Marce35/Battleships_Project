@@ -121,5 +121,19 @@
   <ItemGroup>
     <None Include="Resources\bkackboard.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit2Sound.wav" />
+    <None Include="Resources\hit0Sound.wav" />
+    <None Include="Resources\Battleships_Resources_hit1Sound.wav" />
+    <Content Include="Resources\hitLoudSound.wav" />
+    <None Include="Resources\splash0Sound.wav" />
+    <None Include="Resources\splash1Sound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

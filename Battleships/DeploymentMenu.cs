@@ -129,11 +129,7 @@ namespace Battleships
                 GameWindow.FormClosed += GameWindow_FormClosed;
                 GameWindow.Show();
                 
-                for(int i=0; i<BasePlayer.FleetPositionsList.Count; i++)
-                {
-                    Debug.WriteLine(String.Format("Name: %s\tTag: %s\t", (string)BasePlayer.FleetPositionsList[i].Name,
-                        (string)BasePlayer.FleetPositionsList[i].Tag));
-                }
+                
                 
 
 
