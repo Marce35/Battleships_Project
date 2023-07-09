@@ -139,6 +139,12 @@
     <None Include="Resources\hit.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mainMenuScreenBasic.png" />
+    <None Include="Resources\mainMenuScreenFilled.png" />
+    <None Include="Resources\mainGameScreenBasic.png" />
+    <None Include="Resources\mainGameScreenFilled.png" />
+    <None Include="Resources\mainGameOverLoseScreen.png" />
+    <None Include="Resources\mainGameOverWinScreen.png" />
     <None Include="Resources\youLoseResized.png" />
     <None Include="Resources\youWinResized.png" />
     <None Include="Resources\hit2Sound.wav" />
