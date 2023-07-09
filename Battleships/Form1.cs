@@ -25,16 +25,27 @@ namespace Battleships
         public Player Opponent { get; set; }
         public bool ReadyToAttack { get; set; }
 
+        public bool HardDificulty { get; set; }
+
+        
+
+        public int GameDificultyCounter { get; set; }
+
         public Form1()
         {
             InitializeComponent();
             CenterToScreen();
             MaximizeBox = false;
+            
             New_Game();
         }
 
         public void New_Game()
         {
+            lblMainText.Text = "Press The Start Button to Play";
+            lblPlayerName.Text = DeploymentMenu.BasePlayer.Name + ":";
+            HardDificulty = DeploymentMenu.GameDificulty;
+            GameDificultyCounter = 0;
             ReadyToAttack = true;
             Player = new Player(DeploymentMenu.BasePlayer.Name, 6);
             Opponent = new Player("Computer", 6);
@@ -69,7 +80,6 @@ namespace Battleships
                 {
                     Player.FieldsList[i].Enabled = false;
                     Player.FieldsList[i].BackColor = Color.Navy;
-                    
 
                 }
                 else
@@ -79,8 +89,6 @@ namespace Battleships
                     Player.FieldsList[i].BackgroundImage = null;
                     Player.FieldsList[i].BackColor = Color.White;
                 }
-                //Debug.WriteLine("Player name:" + Player.FieldsList[i].Name + " Player tag: " + (string)Player.FieldsList[i].Tag);
-                //Debug.WriteLine(String.Format("Opponent Name: %s\t Tag: %s\t", (string)Opponent.FieldsList[i].Name, (string)Player.FieldsList[i].Tag));
             }
 
             
@@ -104,8 +112,6 @@ namespace Battleships
                                 button.Tag = null;
                                 button.BackColor = Color.White;
                             }
-
-                            //Debug.WriteLine("Button: " + button.Name + "Player Name: " + Player.FieldsList[i].Name);
                         }
                     }
 
@@ -113,49 +119,30 @@ namespace Battleships
             }
 
             Invalidate();
-            
 
-            
         }
 
         private async void BattleTimerForOpponent_Tick(object sender, EventArgs e)
         {
             if(Player.RemainingShips > 0)
             {
-                int attackIndex = rand.Next(Player.FieldsList.Count);
-
-                if ((string)Player.FieldsList[attackIndex].Tag == "PlayerShip")
+                if (HardDificulty)
                 {
-                    UpdatePlayerButtons(Player.FieldsList[attackIndex], attackIndex);
-
-                    Player.FieldsList[attackIndex].BackgroundImage = Properties.Resources.hit;
-
-                    SoundPlayer = new SoundPlayer(Properties.Resources.hit0Sound);
-                    SoundPlayer.Play();
                     
-                    Player.FieldsList[attackIndex].BackColor = Color.Navy;
-                    Player.FieldsList.RemoveAt(attackIndex);
-
-                    Player.RemainingShips -= 1;
-
-                    Opponent.Hits += 1;
-
-                    
-                    BattleTimerForOpponent.Stop();
+                    if(GameDificultyCounter < 2)
+                    {
+                        EasyGameMode();
+                        GameDificultyCounter++;
+                    }
+                    else
+                    {
+                        HardGameMode();
+                        GameDificultyCounter = 0;
+                    }
                 }
                 else
                 {
-                    UpdatePlayerButtons(Player.FieldsList[attackIndex], attackIndex);
-
-                    Player.FieldsList[attackIndex].BackgroundImage = Properties.Resources.splashImage;
-                    SoundPlayer = new SoundPlayer(Properties.Resources.splash1Sound);
-                    SoundPlayer.Play();
-
-
-                    Player.FieldsList[attackIndex].BackColor = Color.Navy;
-                    Player.FieldsList.RemoveAt(attackIndex);
-                    
-                    BattleTimerForOpponent.Stop();
+                    EasyGameMode();
                 }
                 await Task.Delay(1500);
                 ReadyToAttack = true;
@@ -166,10 +153,120 @@ namespace Battleships
 
             if (Player.RemainingShips == 0)
             {
-                MessageBox.Show("You have lost the game. Better luck next time", "Game Lost");
+                await Task.Delay(1000);
+                GameEnd gameEnd = new GameEnd();
+                gameEnd.BackgroundImage = Properties.Resources.youLoseResized;
+                if (gameEnd.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Restart();
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
             }
 
             Invalidate();
+        }
+
+        private void HardGameMode()
+        {
+            List<int> playerShipPositions = new List<int>();
+            for(int i=0; i<Player.FieldsList.Count; i++)
+            {
+                if ((string)Player.FieldsList[i].Tag == "PlayerShip")
+                {
+                    playerShipPositions.Add(i);
+                }
+            }
+            if (playerShipPositions.Count > 0)
+            {
+                int hardattackposition = playerShipPositions[rand.Next(playerShipPositions.Count)];
+
+                
+
+                Button attackedbutton = Player.FieldsList[hardattackposition];
+
+                if ((string)attackedbutton.Tag == "PlayerShip")
+                {
+                    UpdatePlayerButtons(attackedbutton);
+                    attackedbutton.Tag = "PlayerDestroyedShip";
+
+                    attackedbutton.BackgroundImage = Properties.Resources.hit;
+
+                    SoundPlayer = new SoundPlayer(Properties.Resources.hit0Sound);
+                    SoundPlayer.Play();
+
+                    attackedbutton.BackColor = Color.Navy;
+                    Debug.WriteLine("opponent attacked field " + attackedbutton.Name + " index: " + hardattackposition + " tag: " + attackedbutton.Tag);
+
+                    Player.FieldsList.RemoveAt(hardattackposition);
+
+                    Player.RemainingShips -= 1;
+
+                    Opponent.Hits += 1;
+
+                    
+
+
+
+                }
+                else
+                {
+                    UpdatePlayerButtons(attackedbutton);
+
+                    attackedbutton.BackgroundImage = Properties.Resources.splashImage;
+                    SoundPlayer = new SoundPlayer(Properties.Resources.splash1Sound);
+                    SoundPlayer.Play();
+
+
+                    attackedbutton.BackColor = Color.Navy;
+                    Debug.WriteLine("opponent attacked field " + attackedbutton.Name + " index: " + hardattackposition + " tag: " + attackedbutton.Tag);
+
+                    Player.FieldsList.RemoveAt(hardattackposition);
+
+
+                }
+                BattleTimerForOpponent.Stop();
+            }
+
+        }
+
+        private void EasyGameMode()
+        {
+            int easyAttackPosition = rand.Next(Player.FieldsList.Count);
+
+            if ((string)Player.FieldsList[easyAttackPosition].Tag == "PlayerShip")
+            {
+                UpdatePlayerButtons(Player.FieldsList[easyAttackPosition]);
+
+                Player.FieldsList[easyAttackPosition].Tag = "PlayerDestroyedShip";
+
+                Player.FieldsList[easyAttackPosition].BackgroundImage = Properties.Resources.hit;
+
+                SoundPlayer = new SoundPlayer(Properties.Resources.hit0Sound);
+                SoundPlayer.Play();
+
+                Player.FieldsList[easyAttackPosition].BackColor = Color.Navy;
+                Player.FieldsList.RemoveAt(easyAttackPosition);
+
+                Player.RemainingShips -= 1;
+
+                Opponent.Hits += 1;
+            }
+            else
+            {
+                UpdatePlayerButtons(Player.FieldsList[easyAttackPosition]);
+
+                Player.FieldsList[easyAttackPosition].BackgroundImage = Properties.Resources.splashImage;
+                SoundPlayer = new SoundPlayer(Properties.Resources.splash1Sound);
+                SoundPlayer.Play();
+
+
+                Player.FieldsList[easyAttackPosition].BackColor = Color.Navy;
+                Player.FieldsList.RemoveAt(easyAttackPosition);
+            }
+            BattleTimerForOpponent.Stop();
         }
 
         
@@ -217,10 +314,22 @@ namespace Battleships
             
 
             lblPlayerHits.Text = Player.Hits.ToString();
+           
             
             if(Opponent.RemainingShips == 0)
             {
-                MessageBox.Show("Congratulations you have won the game!!!!", "Game Won");
+                BattleTimerForOpponent.Stop();
+                await Task.Delay(1000);
+                GameEnd gameEnd = new GameEnd();
+                gameEnd.BackgroundImage = Properties.Resources.youWinResized;
+                if(gameEnd.ShowDialog() == DialogResult.OK)
+                {
+                    Application.Restart();
+                }
+                else
+                {
+                    Environment.Exit(0);
+                }
             }
             Invalidate();
         }
@@ -251,6 +360,7 @@ namespace Battleships
                 Opponent.FieldsList[i].BackgroundImage = null;
                 Opponent.FieldsList[i].BackColor = Color.White;
             }
+            lblMainText.Text = "";
             OpponentPositionPicker();
             Invalidate();
         }
@@ -260,7 +370,7 @@ namespace Battleships
 
         }
 
-        private void UpdatePlayerButtons(Button sender, int indexToAttack)
+        private void UpdatePlayerButtons(Button sender)
         {
             foreach (Control control in this.Controls)
             {
@@ -271,6 +381,7 @@ namespace Battleships
                         if((string)button.Tag == "PlayerShip")
                         {
                             button.Enabled = false;
+                            button.Tag = "PlayerDestroyedShip";
                             
                             button.BackgroundImage = Properties.Resources.hit;
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPlayerName = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.u4 = new System.Windows.Forms.Button();
@@ -118,17 +118,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblPlayerName
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(42, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 37);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Player:";
+            this.lblPlayerName.AutoSize = true;
+            this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayerName.ForeColor = System.Drawing.Color.Red;
+            this.lblPlayerName.Location = new System.Drawing.Point(42, 37);
+            this.lblPlayerName.Name = "lblPlayerName";
+            this.lblPlayerName.Size = new System.Drawing.Size(122, 37);
+            this.lblPlayerName.TabIndex = 1;
+            this.lblPlayerName.Text = "Player:";
             // 
             // pictureBox3
             // 
@@ -565,9 +565,9 @@
             this.lblMainText.ForeColor = System.Drawing.Color.Red;
             this.lblMainText.Location = new System.Drawing.Point(364, 529);
             this.lblMainText.Name = "lblMainText";
-            this.lblMainText.Size = new System.Drawing.Size(347, 29);
+            this.lblMainText.Size = new System.Drawing.Size(361, 29);
             this.lblMainText.TabIndex = 21;
-            this.lblMainText.Text = "Posititon your fleet for battle!";
+            this.lblMainText.Text = "Press The Start Button to Play";
             // 
             // pictureBox1
             // 
@@ -1009,7 +1009,7 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPlayerName);
             this.DoubleBuffered = true;
             this.Name = "Form1";
             this.Text = "Battleships Game";
@@ -1024,7 +1024,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPlayerName;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button u4;

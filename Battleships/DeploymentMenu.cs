@@ -19,6 +19,9 @@ namespace Battleships
 
         //reference to the game window
         public Form1 GameWindow { get; set; }
+        
+        //false = easyMode true = hardMode
+        public static bool GameDificulty { get; set; }
         public DeploymentMenu()
         {
             InitializeComponent();
@@ -30,6 +33,20 @@ namespace Battleships
 
         public void PrepareGame()
         {
+            //radio buttons customization
+            rbtnEasyMode.Appearance = Appearance.Button;
+            rbtnHardMode.Appearance = Appearance.Button;
+            rbtnEasyMode.FlatStyle = FlatStyle.Flat;
+            rbtnHardMode.FlatStyle = FlatStyle.Flat;
+           
+            rbtnHardMode.FlatAppearance.BorderColor = Color.Red;
+            rbtnEasyMode.FlatAppearance.BorderColor = Color.Green;
+
+            rbtnEasyMode.BackColor = Color.Transparent;
+            rbtnHardMode.BackColor = Color.Transparent;
+
+
+            GameDificulty = false;
             FleetSizeCount = 6;
             lblUndeployedShips.Text = FleetSizeCount.ToString();
             btnStartGame.Enabled = false;
@@ -55,6 +72,11 @@ namespace Battleships
 
 
 
+        }
+
+        private void DeploymentMenu_Load1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void SelectShipPositions_Click_Event(object sender, EventArgs e)
@@ -128,11 +150,6 @@ namespace Battleships
 
                 GameWindow.FormClosed += GameWindow_FormClosed;
                 GameWindow.Show();
-                
-                
-                
-
-
             }
             else
             {
@@ -147,7 +164,28 @@ namespace Battleships
             this.Show();
         }
 
-
-
+        private void rbtnGameModeEasy_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton button = (RadioButton)sender;
+            if (button.Checked)
+            {
+                string difficulty = button.Text;
+                if(difficulty == "Easy Mode")
+                {
+                    
+                    rbtnEasyMode.FlatAppearance.CheckedBackColor = Color.Black;
+                    rbtnHardMode.FlatAppearance.CheckedBackColor = Color.Transparent;
+                    GameDificulty = false;
+                }
+                else
+                {
+                    
+                    rbtnHardMode.FlatAppearance.CheckedBackColor = Color.Black;
+                    rbtnEasyMode.FlatAppearance.CheckedBackColor = Color.Transparent;
+                    GameDificulty = true;
+                }
+            }
+            
+        }
     }
 }

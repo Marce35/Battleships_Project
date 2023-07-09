@@ -70,6 +70,8 @@
             this.btnStartGame = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbtnHardMode = new System.Windows.Forms.RadioButton();
+            this.rbtnEasyMode = new System.Windows.Forms.RadioButton();
             this.lblUndeployedShips = new System.Windows.Forms.Label();
             this.tbPlayerName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -489,6 +491,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Turquoise;
             this.panel1.BackgroundImage = global::Battleships.Properties.Resources.bkackboard;
+            this.panel1.Controls.Add(this.rbtnHardMode);
+            this.panel1.Controls.Add(this.rbtnEasyMode);
             this.panel1.Controls.Add(this.lblUndeployedShips);
             this.panel1.Controls.Add(this.tbPlayerName);
             this.panel1.Controls.Add(this.label2);
@@ -497,6 +501,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(235, 380);
             this.panel1.TabIndex = 10;
+            // 
+            // rbtnHardMode
+            // 
+            this.rbtnHardMode.AutoSize = true;
+            this.rbtnHardMode.BackColor = System.Drawing.Color.White;
+            this.rbtnHardMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnHardMode.ForeColor = System.Drawing.Color.Red;
+            this.rbtnHardMode.Location = new System.Drawing.Point(29, 305);
+            this.rbtnHardMode.Name = "rbtnHardMode";
+            this.rbtnHardMode.Size = new System.Drawing.Size(151, 33);
+            this.rbtnHardMode.TabIndex = 14;
+            this.rbtnHardMode.TabStop = true;
+            this.rbtnHardMode.Text = "Hard Mode";
+            this.rbtnHardMode.UseVisualStyleBackColor = false;
+            this.rbtnHardMode.CheckedChanged += new System.EventHandler(this.rbtnGameModeEasy_CheckedChanged);
+            // 
+            // rbtnEasyMode
+            // 
+            this.rbtnEasyMode.AutoSize = true;
+            this.rbtnEasyMode.BackColor = System.Drawing.Color.White;
+            this.rbtnEasyMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnEasyMode.ForeColor = System.Drawing.Color.DarkGreen;
+            this.rbtnEasyMode.Location = new System.Drawing.Point(29, 252);
+            this.rbtnEasyMode.Name = "rbtnEasyMode";
+            this.rbtnEasyMode.Size = new System.Drawing.Size(151, 33);
+            this.rbtnEasyMode.TabIndex = 13;
+            this.rbtnEasyMode.TabStop = true;
+            this.rbtnEasyMode.Text = "Easy Mode";
+            this.rbtnEasyMode.UseVisualStyleBackColor = false;
+            this.rbtnEasyMode.CheckedChanged += new System.EventHandler(this.rbtnGameModeEasy_CheckedChanged);
             // 
             // lblUndeployedShips
             // 
@@ -657,5 +691,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider emptyFieldsError;
         private System.Windows.Forms.Label lblUndeployedShips;
+        private System.Windows.Forms.RadioButton rbtnHardMode;
+        private System.Windows.Forms.RadioButton rbtnEasyMode;
     }
 }
