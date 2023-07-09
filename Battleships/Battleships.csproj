@@ -65,6 +65,7 @@
     <Compile Include="GameEnd.Designer.cs">
       <DependentUpon>GameEnd.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +88,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="bin\Debug\Battleships.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -142,9 +144,14 @@
     <None Include="Resources\hit2Sound.wav" />
     <None Include="Resources\hit0Sound.wav" />
     <None Include="Resources\Battleships_Resources_hit1Sound.wav" />
+    <Content Include="bin\Debug\Battleships.exe" />
+    <Content Include="bin\Debug\Battleships.pdb" />
     <Content Include="Resources\hitLoudSound.wav" />
     <None Include="Resources\splash0Sound.wav" />
     <None Include="Resources\splash1Sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
