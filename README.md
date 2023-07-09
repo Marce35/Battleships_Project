@@ -11,16 +11,19 @@ VP_Project strategy game Battleships
 
 #### Начин на играње:
 Кога се стартува играта се отвора форма која претставува главното мени на апликација.
-![mainMenuScreenBasic](https://github.com/Marce35/Battleships_Project/assets/91893109/2425e5fc-bcd7-458f-a0af-e22fa1c8b2cb)
+
+![mainMenuScreenBasic](Battleships/Resources/mainMenuScreenBasic.png)
 
 Во ова мени корисникот го внесува своето **име**, го одбира нивото на **difficulty(easy | hard)** и е потребно да ги позиционира своите бродови на
 некои од полињата прикажани на мапата. 
 По овие чекори копчето за започнување на играта ке му биде достапно.
-![mainMenuScreenFilled](https://github.com/Marce35/Battleships_Project/assets/91893109/aa54fba7-5860-4214-8222-b4dea042b852)
+
+![mainMenuScreenFilled](Battleships/Resources/mainMenuScreenFilled.png)
 
 
 Доколку сите овие чекори се исполнети и успешно се стартува играта, на играчот му се прикажува главната форма на играта каде што и всушност играта започнува.
-![mainGameScreenBasic](https://github.com/Marce35/Battleships_Project/assets/91893109/4ef08a01-5a9e-46d9-a7b6-b89c5ae90593)
+
+![mainGameScreenBasic](Battleships/Resources/mainGameScreenBasic.png)
 На овој екран се претставени двете мапи со полиња,
 левата мапа претставуваат одбраните локации на бродови кои корисникот ги одбрал, а десната мапа оние на противникот.
 
@@ -28,17 +31,17 @@ VP_Project strategy game Battleships
 Играчот е потребно да го притисне копчето **"Start Battle"** по што играта започнува.
 Прв на потег е играчот со тоа што е потребно да одбере некое противничко поле за уништување.
 
-![mainGameScreenFilled](https://github.com/Marce35/Battleships_Project/assets/91893109/4034b5fa-c8f7-4a44-87fd-5c9828a73e5e)
+![mainGameScreenFilled](Battleships/Resources/mainGameScreenFilled.png)
 
 Играта продолжува се додека некои од играчите има бродови кои не се потонати.
 
 Доколку играчот ги потоне сите противнички бродови, се отвора нова форма на која што е известен за својата освоена **победа** и има можност повторно игра или пак да ја затвори апликацијата.
 
-![mainGameOverWinScreen](https://github.com/Marce35/Battleships_Project/assets/91893109/ad2d8f72-fa2c-4393-8c87-81da0850481d)
+![mainGameOverWinScreen](Battleships/Resources/mainGameOverWinScreen.png)
 
 Во спротивно доколку **изгуби** го дочекува слична форма во која што повторно ги има истите опции.
 
-![mainGameOverLoseScreen](https://github.com/Marce35/Battleships_Project/assets/91893109/ab3a00bc-ef09-4aca-9e42-c01d5b620367)
+![mainGameOverLoseScreen](Battleships/Resources/mainGameOverLoseScreen.png)
 
 ### Кратка структура на апликацијата:
 Класата **Player** содржи неколку properties меѓу кои **името на играчот**, бројот на освоени поени, бројот на бродови, како и **листа од мапата со полиња на играчот**.
